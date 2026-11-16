@@ -240,10 +240,36 @@ I participated in the G-001 review, checking the explanation against the linked 
 
 ## 10. Changed / checked / next
 
-**Changed:** Created a project-specific shared plan with a bounded Python corpus, source policy, ETL workflow, two-approach comparison, four stories, balanced ownership, evaluation targets, and an illustrative guide.
+### Changed
 
-**Checked:** Preparation checks included inspecting the initially empty repository, reading three primary technical references and the candidate corpus/license, and tracing G-001's claim to its source. During the G-001 review, the code example was executed and produced the expected output. The source version/hash and required human peer review/independent approval remain pending. No application, ETL, retrieval, or publishing workflow tests are claimed. See Section 7.
+- Created the shared plan with a defined reader, permitted sources, ETL workflow, research comparison, four checkable stories, and assigned owners and reviewers.
+- Added Angelo’s review of Sections 4–6 and Bryan’s documented G-001 source/code review.
+- Updated Section 9 with individual contributions, remaining responsibilities, and AI assistance.
+- Removed the duplicate file so README.md is the single shared record.
 
-**Next:** Angelo and Bryan review and adopt/revise the plan; each records actual contributions and cross-review findings. Then implement the scoped pipeline and run the planned evaluation. Add a demo link only after one exists.
+### Checked
 
-**Submission:** Each member links this same README and repository, includes their own updated contribution and changed/checked/next note, and links relevant research/decisions. Reuse this record instead of creating duplicate reports.
+- Preparation checks covered the research references, Python documentation, source permission basis, and story ownership.
+- Angelo reviewed the retrieval approach and evaluation criteria. His findings emphasized testing vectors against keyword search and investigating graph support rather than switching automatically.
+- Bryan’s documented G-001 review checked the explanation against its source and reviewed the recorded output: `['lists', 'dictionaries']`.
+- G-001 remains pending approval because source-version/hash metadata and independent approval are incomplete. Its execution environment still needs to be documented.
+- No application, ETL pipeline, retrieval index, or automated publishing workflow has been tested.
+
+**Evidence:**
+- [Angelo’s review](#simple-review-section-4-6)
+- [G-001 checks and review](#7-actual-plan-stage-checks-and-worked-example)
+- [Individual contributions](#9-limitations-help-received-and-contribution-record)
+
+### Next
+
+- Angelo and Bryan will finish verifying their assigned sections, discuss the review findings, and record their agreement or revisions.
+- Add the date to Angelo’s review and document who executed G-001 and the Python version/environment used.
+- Keep G-001’s pending approval separate from the status of the overall Plan submission.
+- At Build, implement the scoped workflow and run the planned evaluation.
+- At Improve, document a real peer-requested change and the relevant retest.
+
+### Submission
+
+Each member will submit this shared README and repository link, their own contribution note, relevant research/decision links, and their individual changed/checked/next note from Section 9.
+
+**Current status:** Plan stage — not yet built. No demo exists.
