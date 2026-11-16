@@ -121,7 +121,7 @@ These are future targets, not completed test results.
 
 At Build, each teammate will author five supported evaluation questions and check the other's expected source labels before tuning. Keep failed cases. At Improve, record a real peer-requested change, its linked revision, and a repeat of the relevant check; no such change or retest has happened yet.
 
-## Simple review section 4-6
+## Simple review section 4-6 (Angelo Bustamante, 11/16/2026)
 Reviewer: Angelo Bustamante
 Sections reviewed: Approach comparison and evaluation criteria, Sections 4–6.
 
