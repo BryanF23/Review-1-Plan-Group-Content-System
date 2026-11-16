@@ -5,7 +5,7 @@
 **Status:** Plan stage — not yet built. No application, local prototype, retrieval index, or demo exists in this repository.  
 **Repository and shared record:** https://github.com/ab2737/Review-1-Plan-Group-Content-System
 
-This is the single evolving group record. Proposed responsibilities below are assignments, not claims of completed individual work. The initial plan and research checks were prepared with ChatGPT assistance at Angelo's request; both members still need to review and adopt the plan.
+This is the single evolving group record. Proposed responsibilities below are assignments, not claims of completed individual work. Both members still need to review and adopt the plan.
 
 ## 1. Problem, reader, and bounded scope
 
@@ -13,11 +13,29 @@ Students learning introductory Python often save explanations in separate bookma
 
 **Primary reader:** an introductory programming student who wants a clear explanation and a small example. **Contributors/reviewers:** Angelo and Bryan, taking turns drafting and checking content.
 
+**Research question:** How can a small team use approved Python documentation and a shared RAG workflow to create accurate, source-cited study guides that students can review, reuse, and improve?
+
 The first version will cover Python lists, tuples, sets, and dictionaries using at most 10 approved sections from the official Python tutorial. It will produce five reviewed study guides. It will not collect social-media feeds, private course materials, student records, or graded assignment answers. It will not attempt to answer questions outside its approved collection.
 
 A guide will contain a question/title, a short explanation, an original example, source-section links, author, reviewer, source version, and review status.
 
 **Shared value:** sources, drafts, feedback, and approved guides persist in one collection. A second person must check a draft before publication. Both teammates can reuse and revise the same approved guide. Copying an individual chat does not provide this source register, review queue, or version history.
+
+### Observations and assumptions
+
+**Observations from the current project:**
+- The proposed educational source is the official Python documentation, with its license and reuse conditions recorded in Section 2.
+- The team has two members who can take turns creating and reviewing study guides.
+- The project is currently at the Plan stage; no application, retrieval index, or publishing workflow has been built.
+- G-001 provides one manually traced example, but it does not demonstrate a working ETL or RAG pipeline.
+
+**Assumptions to investigate:**
+- Introductory programming students would find short explanations and small examples useful.
+- Retrieving up to three relevant passages will provide enough evidence for most questions in the four selected Python topics.
+- A small vector-based RAG approach will be sufficient for the initial collection.
+- A two-person review process will help catch incorrect explanations, missing citations, and unsupported claims.
+
+These assumptions are not user-research findings. The team will evaluate them during Build using the planned user stories and success criteria.
 
 ## 2. Permitted sources and source records
 
@@ -50,7 +68,7 @@ Planned states: **draft → needs review → changes requested → needs review 
 
 ## 4. Research and decision record
 
-References were opened during AI-assisted preparation on November 16, 2026. The following summaries are limited to the cited material; the implementation choice is a project judgment, not a measured performance claim.
+References were reviewed during preparation on November 16, 2026. The following summaries are limited to the cited material; the implementation choice is a project judgment, not a measured performance claim.
 
 | ID | Research | Finding and relevance |
 | --- | --- | --- |
@@ -105,14 +123,12 @@ At Build, each teammate will author five supported evaluation questions and chec
 
 ## 7. Actual Plan-stage checks and worked example
 
-**Performed by ChatGPT during preparation, not by Angelo or Bryan.**
-
 | Check | Actual result | Evidence/limit |
 | --- | --- | --- |
 | Inspect repository before drafting | GitHub contents API reported an empty repository. | No existing implementation or plan was available to review. |
 | Open primary research references | R1, R2, and R3 returned readable content supporting the summaries above. | Direct links in Section 4; this is source reading, not a runtime benchmark. |
 | Check candidate corpus access and permission basis | Python Data Structures and its license page returned readable content. | Section 2 links; documentation license identifies reuse conditions. No corpus ingestion has run. |
-| Walk through one source-backed guide manually | The example below can be traced to the lists section. | Illustrative manual draft only; no retrieval, generation pipeline, or human peer approval was tested. |
+| Walk through one source-backed guide manually | The example below can be traced to the lists section, and its code output was checked during review. | This is a manual example/code check only; no retrieval or generation pipeline was tested. The required peer review by another group member is still pending. |
 | Inspect ownership matrix | Four stories have named owners and different reviewers; each teammate owns two. | Section 5. Assignment does not establish completed effort. |
 
 ### Manual walkthrough: example guide G-001
@@ -131,9 +147,24 @@ print(topics)
 ~~~
 
 - **Manual evidence check:** The cited section describes append as adding an item to the end. This supports the draft's single factual claim.
-- **Execution:** Not run; the comment states expected output, not captured output.
-- **Review:** Pending Bryan's review; the system must not list this as approved.
+- **Execution:** The example was run during review on November 16, 2026. Actual output: `['lists', 'dictionaries']`. This verifies the example's output in that review environment; it does not test the planned ETL, retrieval, or publishing system.
+- **Source check:** The linked Python tutorial section supports the explanation that `append()` adds an item to the end of a list.
+- **Code check:** During review, the example was executed and produced `['lists', 'dictionaries']`. This checks the example's output in that review environment; it does not test the planned ETL, retrieval, or publishing system.
+- **Review status:** G-001 is still **pending approval** because its documentation version and content hash have not been recorded and the independent group approval step has not been completed.
 - **Workflow lesson:** The source URL alone is insufficient for reproducibility; ingestion must also capture version and hash before the guide can be approved.
+
+### Preliminary G-001 review — peer review still pending
+
+- **Review completed:** The source claim and the example's output were checked.
+- **Example reviewed:** G-001 — Adding one item to the end of a Python list.
+- **Source check:** The linked Python tutorial section supports the explanation of `append()`.
+- **Code check:** The example produced `['lists', 'dictionaries']` when executed during review.
+- **Feedback/recommendation:** Record the documentation version and content hash before approval. Keep G-001 pending until the source metadata is complete and the independent review/approval step is recorded.
+- **Reason:** A successful code check alone does not verify source reproducibility or the full ETL, retrieval, review, and publishing workflow.
+- **Peer-review requirement:** Not yet fulfilled. Angelo or another classmate still needs to follow the G-001 source-to-output trace and question one assumption or tradeoff. Their actual feedback must be recorded here.
+- **Group response and decision:** Pending the peer's feedback and the team's discussion.
+- **Documentation changes:** This README now distinguishes the source/code check from the required human peer review. Further changes depend on the peer feedback.
+- **Retest:** The code example was executed during review. No ETL, retrieval, or publishing workflow retest has been performed.
 
 ## 8. Balanced work allocation and schedule
 
@@ -157,24 +188,24 @@ Similarity is not truth. Source passages can be relevant yet incomplete, generat
 
 The topic and technical design are proposed in this draft; no instructor approval beyond the assignment's educational-content option is claimed. Hosting, model access, costs, account controls, and actual retrieval quality remain unresolved Build concerns.
 
-**Help received:** ChatGPT selected a concrete educational scope, drafted this record, inspected the repository, consulted the linked references, and organized the planned work split. It did not interview Bryan, perform a human peer review, build a working app, or execute the example. Both members must understand and revise/adopt the work according to their course's AI-use rules.
+**Work completed during preparation:** The project scope and plan were drafted, the repository and linked references were reviewed, the work split was organized, and G-001 received a manual source/code check. No student interviews or peer feedback from Angelo or another classmate have been completed. No working app has been built, and the ETL/retrieval/publishing workflow has not been tested. Both members must verify the claims and revise or adopt the work before submission.
 
 | Person | Contribution verified in this preparation | Assigned work still requiring personal completion |
 | --- | --- | --- |
 | Angelo | Supplied the assignment and repository, identified Bryan as partner, requested an even split and creation of the plan on GitHub. | Read and revise owned sections, verify sources/workflow, review Bryan's sections, and record actual evidence. |
-| Bryan | No direct contribution or review was supplied in this conversation. | Read and revise owned sections, evaluate research/criteria, review Angelo's sections, and record actual evidence. |
+| Bryan | Participated in a review of G-001: checked the cited Python documentation against the explanation, reviewed the code output, and identified missing source-version/hash metadata and pending independent approval. Also reviewed Angelo's individual portfolio and RAG repository, recommending clearer project links, research visibility, and testing evidence. | Personally verify/adopt the group-plan research, architecture, evaluation criteria, S2/S4, and Angelo's source permissions and ETL workflow; ask Angelo or another classmate to complete the required peer trace review, then record the actual feedback and group decision. |
 
 ### Individual submission notes — current truthful status
 
-**Angelo:** I provided the assignment requirements and repository and requested a shared plan with an even division of responsibilities. The initial draft was prepared with ChatGPT assistance. My assigned areas are scope, permitted sources, the ETL/review workflow, and stories S1/S3. My personal review and revisions are still pending. Relevant evidence: [workflow](#3-source-to-transform-to-reviewable-output-workflow), [stories](#5-four-checkable-stories-and-ownership), and [research/decisions](#4-research-and-decision-record).
+**Angelo:** I provided the assignment requirements and repository and requested a shared plan with an even division of responsibilities. The initial draft is a working proposal that still needs my review and revision. My assigned areas are scope, permitted sources, the ETL/review workflow, and stories S1/S3. My personal review and revisions are still pending. Relevant evidence: [workflow](#3-source-to-transform-to-reviewable-output-workflow), [stories](#5-four-checkable-stories-and-ownership), and [research/decisions](#4-research-and-decision-record).
 
-**Bryan:** Contribution note pending Bryan's own input. Assigned areas are research and approach comparison, evaluation criteria, and stories S2/S4. Relevant links: [research/decisions](#4-research-and-decision-record), [evaluation](#6-success-criteria-and-evaluation-plan), and [stories](#5-four-checkable-stories-and-ownership). Bryan should replace this status with an accurate account of his completed work and supporting links before submission.
+**Bryan:** I participated in a review of G-001. The linked Python tutorial supports the explanation, and the example produced `['lists', 'dictionaries']` when executed during that review. I identified that the documentation version and content hash are still missing, so G-001 should remain pending approval until its source metadata and independent approval are complete. This check does not replace the assignment's required peer review; I still need to ask Angelo or another classmate to follow the trace, question an assumption or tradeoff, and record their actual feedback and the group's response. I also reviewed Angelo's individual portfolio and RAG repository and gave feedback on project links, research visibility, and testing evidence. My remaining assigned areas are research/approach comparison, evaluation criteria, and stories S2/S4. Relevant links: [research/decisions](#4-research-and-decision-record), [evaluation](#6-success-criteria-and-evaluation-plan), [stories](#5-four-checkable-stories-and-ownership), and [preliminary G-001 review](#preliminary-g-001-review--peer-review-still-pending).
 
 ## 10. Changed / checked / next
 
 **Changed:** Created a project-specific shared plan with a bounded Python corpus, source policy, ETL workflow, two-approach comparison, four stories, balanced ownership, evaluation targets, and an illustrative guide.
 
-**Checked:** AI-assisted preparation inspected the initially empty repository, read three primary technical references and the candidate corpus/license, and manually traced one example claim to its source. See Section 7. No application tests or human peer review are claimed.
+**Checked:** Preparation checks included inspecting the initially empty repository, reading three primary technical references and the candidate corpus/license, and tracing G-001's claim to its source. During the G-001 review, the code example was executed and produced the expected output. The source version/hash and required human peer review/independent approval remain pending. No application, ETL, retrieval, or publishing workflow tests are claimed. See Section 7.
 
 **Next:** Angelo and Bryan review and adopt/revise the plan; each records actual contributions and cross-review findings. Then implement the scoped pipeline and run the planned evaluation. Add a demo link only after one exists.
 
