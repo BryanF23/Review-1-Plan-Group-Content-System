@@ -121,6 +121,16 @@ These are future targets, not completed test results.
 
 At Build, each teammate will author five supported evaluation questions and check the other's expected source labels before tuning. Keep failed cases. At Improve, record a real peer-requested change, its linked revision, and a repeat of the relevant check; no such change or retest has happened yet.
 
+## Simple review section 4-6
+Reviewer: Angelo Bustamante
+Sections reviewed: Approach comparison and evaluation criteria, Sections 4–6.
+
+Finding: Vector retrieval fits the small initial Python collection. Comparing it with keyword search will help determine whether the added complexity improves retrieval. The evaluation criteria also address source permissions, unsupported questions, factual accuracy, and independent approval.
+
+Recommended clarification: Explain that the keyword comparison may favor either approach. The three-out-of-ten threshold should trigger investigation of graph support, rather than an automatic switch.
+
+Review outcome: The approach is reasonable for the planned scope. Its effectiveness remains untested until Build.
+
 ## 7. Actual Plan-stage checks and worked example
 
 | Check | Actual result | Evidence/limit |
