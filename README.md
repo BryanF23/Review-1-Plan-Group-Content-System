@@ -194,22 +194,49 @@ Equal work means comparable responsibility, not a claim that equal effort has al
 
 ## 9. Limitations, help received, and contribution record
 
-Similarity is not truth. Source passages can be relevant yet incomplete, generation can add unsupported statements, and a small Python-only evaluation will not demonstrate quality on other subjects. Reviewers can also make mistakes. Version tracking, claim-level checks, and retained failures reduce these risks but do not eliminate them.
+### Limitations
 
-The topic and technical design are proposed in this draft; no instructor approval beyond the assignment's educational-content option is claimed. Hosting, model access, costs, account controls, and actual retrieval quality remain unresolved Build concerns.
+Relevant search results do not guarantee correct answers. Retrieved passages may be incomplete, and generated explanations may contain unsupported claims. Our small Python-only evaluation will not demonstrate effectiveness in other subjects.
 
-**Work completed during preparation:** The project scope and plan were drafted, the repository and linked references were reviewed, the work split was organized, and G-001 received a manual source/code check. No student interviews or peer feedback from Angelo or another classmate have been completed. No working app has been built, and the ETL/retrieval/publishing workflow has not been tested. Both members must verify the claims and revise or adopt the work before submission.
+The project remains at the Plan stage. No working application, retrieval index, or automated publishing workflow has been built or tested. G-001 received a manual source/code check, but its documentation version, content hash, and independent approval remain pending.
 
-| Person | Contribution verified in this preparation | Assigned work still requiring personal completion |
+### Help received
+
+ChatGPT assisted with the initial plan, research summaries, work allocation, and wording. Angelo and Bryan contributed reviews recorded in this document. We remain responsible for understanding the design, verifying claims, and accurately reporting completed work.
+
+### Contributions and remaining responsibilities
+
+| Member | Completed contribution | Remaining responsibilities |
 | --- | --- | --- |
-| Angelo | Supplied the assignment and repository, identified Bryan as partner, requested an even split and creation of the plan on GitHub. | Read and revise owned sections, verify sources/workflow, review Bryan's sections, and record actual evidence. |
-| Bryan | Participated in a review of G-001: checked the cited Python documentation against the explanation, reviewed the code output, and identified missing source-version/hash metadata and pending independent approval. Also reviewed Angelo's individual portfolio and RAG repository, recommending clearer project links, research visibility, and testing evidence. | Personally verify/adopt the group-plan research, architecture, evaluation criteria, S2/S4, and Angelo's source permissions and ETL workflow; ask Angelo or another classmate to complete the required peer trace review, then record the actual feedback and group decision. |
+| Angelo Bustamante | Provided the assignment requirements and repository, coordinated the work split, and reviewed Sections 4–6. Evaluated vector retrieval, the keyword baseline, the graph-reconsideration threshold, and publication checks. | Verify and finalize assigned scope, source, and workflow sections; discuss findings with Bryan and record the team’s response. |
+| Bryan | Participated in the documented G-001 source/code review. Checked the explanation against the Python documentation, reviewed the reported output, and identified missing source-version/hash metadata and pending independent approval. | Verify and finalize research, architecture, evaluation criteria, and S2/S4; review source permissions and the workflow; document the code-check environment and respond to Angelo’s findings. |
 
-### Individual submission notes — current truthful status
+### Individual submission note — Angelo
 
-**Angelo:** I provided the assignment requirements and repository and requested a shared plan with an even division of responsibilities. The initial draft is a working proposal that still needs my review and revision. My assigned areas are scope, permitted sources, the ETL/review workflow, and stories S1/S3. My personal review and revisions are still pending. Relevant evidence: [workflow](#3-source-to-transform-to-reviewable-output-workflow), [stories](#5-four-checkable-stories-and-ownership), and [research/decisions](#4-research-and-decision-record).
+I coordinated the shared repository and work allocation and reviewed Sections 4–6. My review found that vector retrieval is a reasonable starting point for the small Python collection, but its value should be tested against keyword search. I also clarified that the three-out-of-ten threshold should prompt investigation of graph support rather than an automatic switch. The system’s effectiveness remains untested until Build.
 
-**Bryan:** I participated in a review of G-001. The linked Python tutorial supports the explanation, and the example produced `['lists', 'dictionaries']` when executed during that review. I identified that the documentation version and content hash are still missing, so G-001 should remain pending approval until its source metadata and independent approval are complete. This check does not replace the assignment's required peer review; I still need to ask Angelo or another classmate to follow the trace, question an assumption or tradeoff, and record their actual feedback and the group's response. I also reviewed Angelo's individual portfolio and RAG repository and gave feedback on project links, research visibility, and testing evidence. My remaining assigned areas are research/approach comparison, evaluation criteria, and stories S2/S4. Relevant links: [research/decisions](#4-research-and-decision-record), [evaluation](#6-success-criteria-and-evaluation-plan), [stories](#5-four-checkable-stories-and-ownership), and [preliminary G-001 review](#preliminary-g-001-review--peer-review-still-pending).
+- **Changed:** Added my review findings and recommendations.
+- **Checked:** Examined the approach comparison and planned checks for source permissions, unsupported answers, factual support, and independent approval.
+- **Next:** Finalize my assigned sections with Bryan and record our response to the review findings.
+
+**Evidence and decision links:**
+- [My review](#simple-review-section-4-6)
+- [Research and decisions](#4-research-and-decision-record)
+- [Evaluation criteria](#6-success-criteria-and-evaluation-plan)
+
+### Individual submission note — Bryan
+
+I participated in the G-001 review, checking the explanation against the linked Python documentation and reviewing the example’s output. The recorded output was `['lists', 'dictionaries']`. I identified that the documentation version and content hash were missing, so the example should remain pending approval. This check supports the example only; it does not demonstrate a working ETL or RAG system.
+
+- **Changed:** Added G-001 review findings and documented the remaining metadata and approval gaps.
+- **Checked:** Compared the explanation with its cited source and reviewed the example’s output.
+- **Next:** Document the execution environment, finalize my assigned research and evaluation sections, and discuss Angelo’s review findings.
+
+**Evidence and decision links:**
+- [G-001 review](#preliminary-g-001-review--peer-review-still-pending)
+- [Research and decisions](#4-research-and-decision-record)
+- [Evaluation criteria](#6-success-criteria-and-evaluation-plan)
+- [Assigned stories](#5-four-checkable-stories-and-ownership)
 
 ## 10. Changed / checked / next
 
